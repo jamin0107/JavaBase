@@ -1,4 +1,4 @@
-package com.jamin.java.designpatterns.factory;
+package com.jamin.java.designpatterns.factory.simple;
 
 public abstract class Operation {
 
