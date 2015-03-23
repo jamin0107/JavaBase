@@ -8,12 +8,22 @@ public class AbsDBFactory implements DBFactory{
 	public <T extends BaseModel> void insert(Class<T> clz, T t) {
 		try {
 			BaseModel baseModel = (BaseModel) Class.forName(clz.getName()).newInstance();
-			Field[] fileds = clz.getFields();
+			Field[] fileds = clz.getDeclaredFields();
+			Field[] filedsSupper = clz.getSuperclass().getDeclaredFields();
 			StringBuilder sb = new StringBuilder();
-			for(Field f : fileds){
+			
+			for(Field f : filedsSupper){
+				f.setAccessible(true);
 				sb.append(f.getType().getSimpleName().toString() + ":" + f.getName() + " = " + f.get(t));
 				sb.append("\n");
 			}
+			
+			for(Field f : fileds){
+				f.setAccessible(true);
+				sb.append(f.getType().getSimpleName().toString() + ":" + f.getName() + " = " + f.get(t));
+				sb.append("\n");
+			}
+			
 			System.out.println("INSERT = " + baseModel.getClass().getSimpleName() + "\n" + sb);
 		} catch (Exception e) {
 			System.out.println("insert Exception");
