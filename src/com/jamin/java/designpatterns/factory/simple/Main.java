@@ -2,10 +2,10 @@ package com.jamin.java.designpatterns.factory.simple;
 
 public class Main {
 
-	
+
 	private static int a = 10;
 	private static int b = 5;
-	
+
 	public static void main(String[] args) {
 		//factory add
 		Operation operation1 = OperationFactory.factory(OperationFactory.TYPE_ADD);
@@ -19,6 +19,10 @@ public class Main {
 		operation2.setB(b);
 		int result2 = operation2.operation();
 		System.out.println("resulut2 = " + result2);
+
+		System.out.println("resulut3 = " + (8 << 1));
+		System.out.println("resulut3 = " + (8 >> 1));
+
 	}
 
 
