@@ -19,17 +19,11 @@ import java.util.Scanner;
  * sub-sequence, the end position of the sub-sequence. If there are more than
  * one result, output the first one. Output a blank line between two cases.
  * 
- * Sample Input 
- * 2 
- * 5 6 -1 5 4 -7 
- * 7 0 6 -1 1 -6 7 -5
+ * Sample Input 2 5 6 -1 5 4 -7 7 0 6 -1 1 -6 7 -5
  * 
- * Sample Output 
- * Case 1: 
- * 14 1 4
+ * Sample Output Case 1: 14 1 4
  * 
- * Case 2: 
- * 7 1 6
+ * Case 2: 7 1 6
  * 
  * @author Jamin
  *
@@ -40,28 +34,49 @@ public class Main1003 {
 		Scanner scanner = new Scanner(System.in);
 		int n = scanner.nextInt();// 总共需要计算几组序列
 		StringBuilder stringBuilder = new StringBuilder();
-		//序列循环N次
+		// 序列循环N次
 		for (int i = 1; i <= n; i++) {
 			stringBuilder.setLength(0);
+			// array Size
+			int arraySize = scanner.nextInt();
+
+			int start = 0, end = 0;
+			int tempStart = 0;// temp var
+			int sum = 0;
+			int maxSum = -1001;// maxSum minValue is -1000
+			for (int j = 0; j < arraySize; j++) {
+				int arrayNumber = scanner.nextInt();
+				sum += arrayNumber;
+				if (sum > maxSum) {
+					maxSum = sum;
+					end = j;
+					start = tempStart;
+				}
+				if (sum < 0) {
+					tempStart = j + 1;
+					sum = 0;
+				}
+			}
+			// Case 1:
 			stringBuilder.append("Case ");
 			stringBuilder.append(i);
 			stringBuilder.append(":");
 			System.out.println(stringBuilder);
 			stringBuilder.setLength(0);
+
+			//output result
+			stringBuilder.append(maxSum);
+			stringBuilder.append(" ");
+			stringBuilder.append(start + 1);
+			stringBuilder.append(" ");
+			stringBuilder.append(end + 1);
+			System.out.println(stringBuilder);
+
+			// if not last line add block line after result
 			if (i < n) {
-				caculator(stringBuilder);
-				System.out.println(stringBuilder);
 				System.out.println();
-			} else {
-				System.out.println(stringBuilder);
 			}
-
 		}
+	}
 
-	}
-	
-	private static void caculator(StringBuilder stringBuilder){
-		
-		
-	}
 }

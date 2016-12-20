@@ -4,7 +4,9 @@ import java.math.BigInteger;
 import java.util.Scanner;
 
 /**
- * I have a very simple problem for you. Given two integers A and B, your job is to calculate the Sum of A + B.
+ * I have a very simple problem for you. 
+ * Given two integers A and B, 
+ * your job is to calculate the Sum of A + B.
  * @author Jamin
  *
  */
@@ -23,35 +25,29 @@ public class Main1002 {
 			stringBuilder.setLength(0);
 			a = scanner.nextBigInteger();
 			b = scanner.nextBigInteger();
+			//case 1:
 			stringBuilder.append("Case ");
 			stringBuilder.append(i);
 			stringBuilder.append(":");
 			System.out.println(stringBuilder);
+			//a + b = sum
 			stringBuilder.setLength(0);
+			stringBuilder.append(a);
+			stringBuilder.append(" + ");
+			stringBuilder.append(b);
+			stringBuilder.append(" = ");
+			stringBuilder.append(a.add(b));
+			System.out.println(stringBuilder);
+			//if not last line add block line after result
 			if(i < num){
-				stringBuilder.append(a);
-				stringBuilder.append(" + ");
-				stringBuilder.append(b);
-				stringBuilder.append(" = ");
-				stringBuilder.append(a.add(b));
-				System.out.println(stringBuilder);
 				System.out.println();
-			}else{
-				stringBuilder.append(a);
-				stringBuilder.append(" + ");
-				stringBuilder.append(b);
-				stringBuilder.append(" = ");
-				stringBuilder.append(a.add(b));
-				System.out.println(stringBuilder);
 			}
-			
-			
 		}
 	}
 	
 	
-	//327MS	11660K
-	//358MS	11664K	564B
+//	//327MS	11660K
+//	//358MS	11664K	564B
 //	public static void main(String[] args) {
 //		
 //		Scanner scanner = new Scanner(System.in);
@@ -61,14 +57,10 @@ public class Main1002 {
 //			a = scanner.nextBigInteger();
 //			b = scanner.nextBigInteger();
 //			System.out.println("Case " + i +":");
+//			System.out.println(a + " + " + b + " = " + a.add(b));
 //			if(i < num){
-//				System.out.println(a + " + " + b + " = " + a.add(b));
 //				System.out.println();
-//			}else{
-//				System.out.println(a + " + " + b + " = " + a.add(b));
 //			}
-//			
-//			
 //		}
 //	}
 	
