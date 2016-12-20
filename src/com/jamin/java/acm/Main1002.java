@@ -3,7 +3,12 @@ package com.jamin.java.acm;
 import java.math.BigInteger;
 import java.util.Scanner;
 
-public class Class1002 {
+/**
+ * I have a very simple problem for you. Given two integers A and B, your job is to calculate the Sum of A + B.
+ * @author Jamin
+ *
+ */
+public class Main1002 {
 	
 
 	//374MS	11520K	1062B

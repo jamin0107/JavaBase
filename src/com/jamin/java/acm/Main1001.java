@@ -2,7 +2,13 @@ package com.jamin.java.acm;
 
 import java.util.Scanner;
 
-public class Class1001 {
+
+/**
+ * In this problem,your task is to calculate SUM(n) = 1 + 2 + 3 + ... + n.
+ * @author Jamin
+ *
+ */
+public class Main1001 {
 
 	
 	public static void main(String[] args) {
