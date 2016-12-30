@@ -24,9 +24,9 @@ import java.util.Scanner;
  * Sample Output Case 1: 14 1 4
  * 
  * Case 2: 7 1 6
- * 
+ * ¶¯Ì¬¹æ»®(dynamic programming)
  * @author Jamin
- *
+ * 670MS	13840K	1126B	
  */
 public class Main1003 {
 

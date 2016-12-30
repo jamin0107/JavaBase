@@ -8,7 +8,8 @@ import java.util.Scanner;
  * Given two integers A and B, 
  * your job is to calculate the Sum of A + B.
  * @author Jamin
- *
+ * 374MS 11520K 1062B
+
  */
 public class Main1002 {
 	
