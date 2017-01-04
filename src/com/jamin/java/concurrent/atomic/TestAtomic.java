@@ -2,9 +2,10 @@ package com.jamin.java.concurrent.atomic;
 
 import java.util.concurrent.atomic.AtomicInteger;
 /**
+ * http://www.blogjava.net/xylz/archive/2010/07/01/324988.html
  * ≤‚ ‘‘≠◊”–‘
  * @author Jamin
- *
+ * 
  */
 public class TestAtomic {
 
@@ -13,7 +14,7 @@ public class TestAtomic {
 	
 	public static void main(String[] args) {
 		testAtomic();
-		testSpeed();
+//		testSpeed();
 	}
 	
 	
