@@ -1,6 +1,8 @@
 package com.jamin.java.concurrent.atomic;
 
 import java.util.concurrent.atomic.AtomicInteger;
+
+import com.jamin.java.concurrent.hanppenbefore.TestLock;
 /**
  * http://www.blogjava.net/xylz/archive/2010/07/01/324988.html
  * ≤‚ ‘‘≠◊”–‘
@@ -10,6 +12,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class TestAtomic {
 
 	static AtomicInteger atomicInteger = new AtomicInteger(0);
+	static TestLock testLock = new TestLock(0);
 	static int a;
 	
 	public static void main(String[] args) {
@@ -56,6 +59,19 @@ public class TestAtomic {
 			});
 			thread1.start();
 		}
+		
+//		for(int i = 0 ;i < 1000 ; i++){
+//			Thread thread1 = new Thread(new Runnable() {
+//				@Override
+//				public void run() {
+//					for(int i = 0 ; i < 100; i++){
+//						System.out.println("testLock = " + testLock.incrementAndGet());
+//					}
+//					
+//				}
+//			});
+//			thread1.start();
+//		}
 		
 		
 		for(int i = 0 ;i < 1000 ; i++){
