@@ -9,7 +9,15 @@ public class TestProductQueue {
 			@Override
 			public void run() {
 				try {
+					Thread.sleep(1000);
 					System.out.println("take wait");
+					System.out.println(productQueue.take());
+					System.out.println(productQueue.take());
+					System.out.println(productQueue.take());
+					System.out.println(productQueue.take());
+					System.out.println(productQueue.take());
+					System.out.println(productQueue.take());
+					System.out.println(productQueue.take());
 					System.out.println(productQueue.take());
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
@@ -24,9 +32,16 @@ public class TestProductQueue {
 			@Override
 			public void run() {
 				try {
-					Thread.sleep(1000);
+//					Thread.sleep(1000);
 					System.out.println("put");
-					productQueue.put("abc");
+					productQueue.put("abc1");
+					productQueue.put("efg2");
+					productQueue.put("abc3");
+					productQueue.put("efg4");
+					productQueue.put("abc5");
+					productQueue.put("efg6");
+					productQueue.put("abc7");
+					productQueue.put("efg8");
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

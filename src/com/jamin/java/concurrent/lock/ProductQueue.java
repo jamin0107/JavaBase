@@ -22,13 +22,14 @@ public class ProductQueue<T> {
     }
 
     public ProductQueue() {
-        this(10);
+        this(5);
     }
 
     public void put(T t) throws InterruptedException {
         lock.lock();
         try {
             while (count == getCapacity()) {
+            	System.out.println("full ,wait take");
                 notFull.await();
             }
             items[tail] = t;
@@ -46,6 +47,7 @@ public class ProductQueue<T> {
         lock.lock();
         try {
             while (count == 0) {
+            	System.out.println("empty ,wait put");
                 notEmpty.await();
             }
             T ret = items[head];
