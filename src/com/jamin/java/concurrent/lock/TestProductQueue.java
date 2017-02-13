@@ -10,7 +10,7 @@ public class TestProductQueue {
 			public void run() {
 				try {
 					Thread.sleep(1000);
-					System.out.println("take wait");
+					System.out.println("take take");
 					System.out.println(productQueue.take());
 					System.out.println(productQueue.take());
 					System.out.println(productQueue.take());
@@ -33,7 +33,7 @@ public class TestProductQueue {
 			public void run() {
 				try {
 //					Thread.sleep(1000);
-					System.out.println("put");
+					System.out.println("put put");
 					productQueue.put("abc1");
 					productQueue.put("efg2");
 					productQueue.put("abc3");
