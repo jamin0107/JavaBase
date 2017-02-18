@@ -20,6 +20,8 @@ public class TestBarrier {
 			public void run() {
 				work.run();
 				try {
+					System.out.println("before barrier index");
+					//线程会卡在barrier.await这里，等待，一起执行是个之后，在一起结束。然后开启下一次循环。
 					int index = barrier.await();
 					System.out.println("index = " + index);
 					doWithIndex(index);
