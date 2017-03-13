@@ -1,4 +1,4 @@
-package com.jamin.java.sort;
+package com.jamin.java.algorithm.sort;
 
 public class QuickSort {
 
