@@ -8,7 +8,7 @@ http://www.cnblogs.com/maowang1991/archive/2013/04/15/3023236.html
 结构型模式，共七种：
 
 适配器模式(Adapter) , 装饰器模式(Decorator) , 代理模式(Proxy) , 
-外观模式(Facade) , 桥接模式(Bridge) , 组合模式(Composite) , 享元模式
+外观模式(Facade) , 桥接模式(Bridge) , 组合模式(Composite) , 享元模式(Flyweight)
 
 行为型模式，共十一种：
 
