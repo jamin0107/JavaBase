@@ -7,6 +7,7 @@ public class Process implements Observer{
 	ObserverMgr obmgr = null;
 	
 	public Process() {
+		//×¢²á¹Û²ìÕß
 		obmgr = new ObserverMgr();
 		obmgr.registerObserver(this);
 	}
