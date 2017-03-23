@@ -13,4 +13,4 @@ http://www.cnblogs.com/maowang1991/archive/2013/04/15/3023236.html
 行为型模式，共十一种：
 
 策略模式(Strategy) , 模板方法模式 (Template), 观察者模式 (Observer), 迭代子模式 (Iterator), 责任链模式(Chain) , 命令模式 (Command),
- 备忘录模式(Memento) , 状态模式 , 访问者模式 , 中介者模式 , 解释器模式
+ 备忘录模式(Memento) , 状态模式 (State), 访问者模式 , 中介者模式 , 解释器模式
